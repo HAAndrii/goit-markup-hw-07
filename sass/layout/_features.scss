@@ -3,6 +3,7 @@
 }
 
 .features-list {
+    @extend %list;
     display: flex;
 }
 
@@ -22,16 +23,14 @@
 }
 
 .features-list__icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %block-center;
     height: 120px;
     background-color: var(--bg-second);
     border-radius: 4px;
     margin-bottom: 30px;
 }
 
-.features-list-description {
+.features-list__description {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
