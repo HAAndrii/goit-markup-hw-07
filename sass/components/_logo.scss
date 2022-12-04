@@ -1,17 +1,29 @@
 .logo {
     @extend %link;
+  
     font-family: var(--logo-font);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+    
+    &--accent{
+        color: var(--acсent-color);
+    }
+}
+
+.header__logo{
     margin-right: 93px;
-}
 
-.logo__first {
-    color: var(--acсent-color);
-}
-
-.logo__second {
+    &--color {
     color: var(--logo-first-color);
+    }
+}
+
+.footer__logo{
+    display: inline-block;
+    margin-bottom: 20px;
+    &--color {
+    color: var(--logo-second-color);
+    }
 }

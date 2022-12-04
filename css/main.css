@@ -55,7 +55,7 @@ img {
   display: block;
 }
 
-.hero__button {
+.subscription__button, .hero__button {
   cursor: pointer;
   background-color: var(--acсent-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -73,7 +73,7 @@ img {
   list-style: none;
 }
 
-.social-icons__link, .contact__link, .menu__link, .logo {
+.address__link, .social-icons__link, .contact__link, .menu__link, .logo {
   text-decoration: none;
 }
 
@@ -86,7 +86,7 @@ img {
   /* outline: 1px solid red; */
 }
 
-.what-list__desc, .features-list__icons, .clients-list__link, .social-icons__link, .social-icons {
+.subscription__button, .what-list__desc, .features-list__icons, .clients-list__link, .social-icons__link, .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,15 +124,24 @@ img {
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  margin-right: 93px;
 }
-
-.logo__first {
+.logo--accent {
   color: var(--acсent-color);
 }
 
-.logo__second {
+.header__logo {
+  margin-right: 93px;
+}
+.header__logo--color {
   color: var(--logo-first-color);
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer__logo--color {
+  color: var(--logo-second-color);
 }
 
 .menu {
@@ -234,6 +243,19 @@ img {
   color: var(--bg-main);
 }
 
+.footer-social__social-icons {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer-social__link {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--bg-main);
+  -webkit-transition: background-color var(--time) var(--cubic);
+  transition: background-color var(--time) var(--cubic);
+}
+
 .social-icons__item:not(:last-child) {
   margin-right: 10px;
 }
@@ -313,6 +335,32 @@ img {
 
 .clients-list__icon {
   fill: currentColor;
+}
+
+.address__post {
+  margin-bottom: 9px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--logo-second-color);
+}
+
+.addres__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--address-color);
+  font-style: normal;
+  -webkit-transition: color var(--time) var(--cubic);
+  transition: color var(--time) var(--cubic);
+}
+.address__link:hover, .address__link:focus {
+  color: var(--acсent-color);
 }
 
 /* HERO */
@@ -458,55 +506,7 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.footer-logo {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-family: var(--logo-font);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-}
-
-.footer-logo-first {
-  color: var(--acсent-color);
-}
-
-.footer-logo-second {
-  color: var(--logo-second-color);
-}
-
-.address-post {
-  margin-bottom: 9px;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--logo-second-color);
-}
-
-.addres-list-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.address-list-link {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--address-color);
-  font-style: normal;
-  -webkit-transition: color var(--time) var(--cubic);
-  transition: color var(--time) var(--cubic);
-}
-
-.address-list-link:hover,
-.address-list-link:focus {
-  color: var(--acсent-color);
-}
-
-.footer > .container {
+.footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,7 +521,7 @@ img {
   margin-left: 70px;
 }
 
-.footer-title {
+.footer-social__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -531,54 +531,12 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-social .social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.footer-social .social-link {
-  width: 44px;
-  height: 44px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: var(--bg-main);
-  -webkit-transition: background-color var(--time) var(--cubic);
-  transition: background-color var(--time) var(--cubic);
-}
-
-.footer-social .social-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.footer-social .social-link:hover,
-.footer-social .social-link:focus {
-  background-color: var(--acсent-color);
-}
-
-.footer-social .icon {
-  fill: currentColor;
-}
-
 /* subscription */
-.footer-subscription {
+.subscription {
   padding-top: 12px;
   margin-left: 93px;
 }
-
-.sub-label {
+.subscription__label {
   display: inline-block;
   margin-bottom: 20px;
   font-weight: 700;
@@ -588,14 +546,13 @@ img {
   text-transform: uppercase;
   color: #ffffff;
 }
-
-.sub-box {
+.subscription__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.sub-input {
+.subscription__input {
   width: 358px;
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -607,38 +564,18 @@ img {
   -webkit-transition: border-color var(--time) var(--cubic);
   transition: border-color var(--time) var(--cubic);
 }
-
-.sub-input:focus {
+.subscription__input:focus {
   outline: none;
   border-color: var(--acсent-color);
 }
 
-.sub-btn {
+.subscription__button {
   margin-left: 12px;
-  width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 10px 28px;
-  background-color: var(--acсent-color);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: #ffffff;
+  width: 200px;
 }
 
-.sub-btn .icon {
+.subscription__icon {
   fill: var(--bg-main);
   margin-left: 10px;
 }
